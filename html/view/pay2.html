@@ -1,0 +1,40 @@
+<script type="text/javascript">
+var allcookies = document.cookie;
+//document.write ("All Cookies : " + allcookies );
+
+    if (document.cookie.length != 0)
+    {
+        var cookiesArray = document.cookie.split("; ");
+        for (var i = 0; i < cookiesArray.length; i++)
+        {
+            var nameValueArray = cookiesArray[i].split("=");
+            if (nameValueArray[0] == "name")
+            {
+                //document.getElementById("txtName").value = nameValueArray[1];
+                //document.write ("All Cookies : " + cookiearray );
+                //document.write ("1");
+                var name = nameValueArray[1]
+                document.write (name);
+            }
+            else if (nameValueArray[0] == "accnum")
+            {
+                //document.getElementById("txtEmail").value = nameValueArray[1];
+                //document.write ("All Cookies : " + cookiearray );
+                var accnum = nameValueArray[1]
+                document.write (accnum);
+            }
+            else if (nameValueArray[0] == "balance")
+            {
+                //document.getElementById("txtGender").value = nameValueArray[1];
+                //document.write ("All Cookies : " + cookiearray );
+                var balance = nameValueArray[1]
+                document.write (balance);
+            }
+        }
+    }
+    else
+    {
+        alert("No cookies found");
+    }
+
+    </script>
